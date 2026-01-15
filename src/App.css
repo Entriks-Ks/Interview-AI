@@ -886,12 +886,12 @@
   }
 }
 
-/* Start Call Button */
+/* Start Call Button background: linear-gradient(135deg, #10b981, #059669); */
 .start-call-btn {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: #5920de;
   color: white;
   border: none;
   display: flex;
@@ -912,7 +912,7 @@
 .start-call-btn:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 15px 45px rgba(16, 185, 129, 0.45);
-  background: linear-gradient(135deg, #059669, #047857);
+  background: #5920de;
 }
 
 .start-call-btn:active {
@@ -1175,4 +1175,19 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+/* Adjusted styles for dial end call and ute button */
+.dial-end {
+  font-size: 0.8rem;
+  /* Adjusted size */
+  padding: 0.5rem;
+  /* Adjusted padding */
+}
+
+.ute-button {
+  font-size: 0.8rem;
+  /* Adjusted size */
+  padding: 0.5rem;
+  /* Adjusted padding */
 }

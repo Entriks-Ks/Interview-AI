@@ -4,6 +4,7 @@ import './App.css';
 // Decode interview token to extract payload
 function decodeInterviewToken(token: string) {
   try {
+
     const [payloadBase64] = token.split('.');
     const payloadJson = atob(payloadBase64.replace(/-/g, '+').replace(/_/g, '/'));
     const payload = JSON.parse(payloadJson);
