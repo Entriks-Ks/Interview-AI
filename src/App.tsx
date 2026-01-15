@@ -275,34 +275,36 @@ export default function App() {
       <div className="call-card">
         <div className="card-accent" aria-hidden="true"></div>
 
-        {/* Header - Status and Timer */}
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <h1 className="text-xl font-semibold text-slate-800">AI Interview</h1>
+        {/* Welcome Header */}
+        {status !== 'live' && (
+          <div className="welcome-header">
+            <p className="text-sm">Hi {candidateName || 'there'}, great to have you here! Start the conversation by clicking the button and chat comfortably with our AI assistant.</p>
           </div>
-          <div className="text-right">
-            <div className="text-lg font-medium text-slate-700">
-              {formatTime(seconds)}
-            </div>
-            <div
-              className={`mt-1 inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full ${status === 'live' ? 'status-badge-live' :
-                status === 'connecting' ? 'status-badge-connecting' :
-                  'status-badge-idle'
+        )}
+
+        {/* Header - Status and Timer */}
+        <div className="flex justify-between items-center mb-4">
+          <div className="text-sm font-medium text-slate-700">
+            {formatTime(seconds)}
+          </div>
+          <div
+            className={`inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full ${status === 'live' ? 'status-badge-live' :
+              status === 'connecting' ? 'status-badge-connecting' :
+                'status-badge-idle'
+              }`}
+          >
+            <span
+              className={`w-2 h-2 rounded-full ${status === 'live' ? 'bg-green-400 pulse' :
+                status === 'connecting' ? 'bg-yellow-400 pulse' :
+                  'bg-slate-300'
                 }`}
-            >
-              <span
-                className={`w-2 h-2 rounded-full ${status === 'live' ? 'bg-green-400 pulse' :
-                  status === 'connecting' ? 'bg-yellow-400 pulse' :
-                    'bg-slate-300'
-                  }`}
-              ></span>
-              <span className="font-medium">
-                {status === 'connecting' ? 'Connecting...' :
-                  status === 'live' ? 'Live' :
-                    status === 'idle' ? 'Ready' :
-                      'Ended'}
-              </span>
-            </div>
+            ></span>
+            <span className="font-medium">
+              {status === 'connecting' ? 'Connecting...' :
+                status === 'live' ? 'Live' :
+                  status === 'idle' ? 'Ready' :
+                    'Ended'}
+            </span>
           </div>
         </div>
 
@@ -326,7 +328,7 @@ export default function App() {
 
           {/* Info Text Below Circle */}
           <div className="mt-4 text-center">
-            <div className="text-slate-700 font-medium">AI Interviewer</div>
+            <div className="text-sm text-slate-700 font-medium">AI Interviewer</div>
             <div className="text-xs text-slate-400 mt-1">Supply Chain Manager</div>
           </div>
 

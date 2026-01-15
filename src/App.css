@@ -498,6 +498,24 @@
   border: 1px solid rgba(226, 232, 240, 0.5);
 }
 
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--slate-600);
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.6), rgba(240, 249, 255, 0.5));
+  border-radius: 0.75rem;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  transition: all 0.5s ease;
+}
+
+.welcome-header.fade-out {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
 /* Helpers */
 .min-h-screen {
   min-height: 100vh;
@@ -586,8 +604,8 @@
 
 /* Large Animated Call Circle */
 .call-circle {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background: white;
   display: flex;
@@ -600,15 +618,15 @@
 
 @media (min-width: 640px) {
   .call-circle {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (min-width: 768px) {
   .call-circle {
-    width: 220px;
-    height: 220px;
+    width: 170px;
+    height: 170px;
   }
 }
 
@@ -636,6 +654,10 @@
 }
 
 /* Active state - slightly stronger glow */
+.call-circle.active {
+  box-shadow: 0 30px 80px rgba(32, 193, 245, 0.25), 0 0 0 2px rgba(32, 193, 245, 0.1);
+}
+
 .call-circle.active::after {
   opacity: 0.4;
   animation: pulse-glow 2s ease-in-out infinite;
@@ -652,8 +674,8 @@
 }
 
 .call-circle-inner {
-  width: 176px;
-  height: 176px;
+  width: 126px;
+  height: 126px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   display: flex;
@@ -666,15 +688,15 @@
 
 @media (min-width: 640px) {
   .call-circle-inner {
-    width: 196px;
-    height: 196px;
+    width: 146px;
+    height: 146px;
   }
 }
 
 @media (min-width: 768px) {
   .call-circle-inner {
-    width: 216px;
-    height: 216px;
+    width: 166px;
+    height: 166px;
   }
 }
 
@@ -888,8 +910,8 @@
 
 /* Start Call Button background: linear-gradient(135deg, #10b981, #059669); */
 .start-call-btn {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: #5920de;
   color: white;
@@ -904,8 +926,8 @@
 
 @media (min-width: 640px) {
   .start-call-btn {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -926,8 +948,8 @@
 
 /* Round Control Buttons */
 .control-btn-round {
-  width: 54px;
-  height: 54px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: white;
   color: var(--slate-700);
@@ -942,8 +964,8 @@
 
 @media (min-width: 640px) {
   .control-btn-round {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
   }
 }
 
@@ -970,8 +992,8 @@
 
 /* End Call Button */
 .end-call-btn {
-  width: 54px;
-  height: 54px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--red-500);
   color: white;
@@ -986,8 +1008,8 @@
 
 @media (min-width: 640px) {
   .end-call-btn {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
   }
 }
 
