@@ -37,7 +37,7 @@
 
 /* App container - fits viewport without scrolling */
 .app-container {
-  background: linear-gradient(135deg, #e8f1f8 0%, #f0e8f5 50%, #e8f5f0 100%);
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #f3e8ff 100%);
   min-height: 100vh;
   max-height: 100vh;
   display: flex;
@@ -498,6 +498,9 @@
   border: 1px solid rgba(226, 232, 240, 0.5);
 }
 
+/* Welcome Header */
+.welcome-header {
+  text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1rem;
   color: var(--slate-600);
